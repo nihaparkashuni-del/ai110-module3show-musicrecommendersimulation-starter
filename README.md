@@ -75,3 +75,6 @@ pytest
 Building this recommender taught me that turning data into predictions is really just math with opinions baked in. Every weight I assigned like making genre worth +2 points and mood worth only +1 was a design choice that directly shaped what the system recommended. The system doesn't understand music at all. It just compares numbers. What surprised me most was how a single number change (doubling the energy weight) didn't even change the song rankings  genre was so dominant it didn't matter. That made me realize how easy it is to accidentally make a biased system just by picking one feature over another without thinking about it.
 
 Bias in a system like this can sneak in from two places: the weights and the data. My genre weight being twice as strong as mood means users whose favorite genre isn't well represented in the catalog get much worse recommendations than pop or lofi fans. If this were a real product, that would mean certain groups of users consistently get a worse experience just because of how I built the math. Real platforms have the same problem at a much larger scale their training data reflects whoever was already using the platform, which means new or niche tastes get underserved. Building even this tiny version made that very concrete for me.
+
+### Sample Output
+![Terminal Output](screenshotcodepath.png)
